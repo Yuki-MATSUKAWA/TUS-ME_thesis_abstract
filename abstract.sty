@@ -1,0 +1,51 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      abst.sty for pLaTex2e
+%                            v1.0
+%
+% v1.1     by Yuki MATSUKAWA  2023/02/01
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% テキストエリア指定
+%%% A4 paper:297mm x 210mm
+\setlength{\hoffset}{-0.4truemm}
+\setlength{\voffset}{-5.4truemm}
+\setlength{\oddsidemargin}{0truemm}
+\setlength{\evensidemargin}{0truemm}
+\setlength{\topmargin}{0truemm}
+%\setlength{\footskip}{15truemm}
+\setlength{\textheight}{262truemm}
+\setlength{\textwidth}{175truemm}
+\setlength{\headsep}{0truemm}
+\setlength{\headheight}{0truemm}
+
+%%==== Packages ================================%%
+
+\usepackage[dvipdfmx]{graphicx}  %EPSF挿入用
+\usepackage{amsmath,amssymb}   %AMS-LaTeX
+\usepackage[deluxe]{otf}
+\usepackage{newtxtext,newtxmath}
+
+%%==== 表示の変更 ==============================%%
+
+\newcommand{\etal}{et al.\ }
+\def\Gr{\mathit{Gr}}
+\def\Ma{\mathit{Ma}}
+\def\Nu{\mathit{Nu}}
+\def\Pe{\mathit{Pe}}
+\def\Pr{\mathit{Pr}}
+\def\Re{\mathit{Re}}
+\def\Ra{\mathit{Ra}}
+\def\Sc{\mathit{Sc}}
+\def\St{\mathit{St}}
+\def\Ta{\mathit{Ta}}
+\def\Wi{\mathit{Wi}}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Table}       %表番号
+\newcommand{\eref}[1]{式~(\ref{#1})}
+\newcommand{\Eref}[1]{Equation~(\ref{#1})}
+\newcommand{\sref}[1]{\ref{#1}~節}
+\newcommand{\fref}[1]{図~\ref{#1}}
+\newcommand{\Fref}[1]{Fig.~\ref{#1}}
+\newcommand{\tref}[1]{表~\ref{#1}}
+\newcommand{\Tref}[1]{Table~\ref{#1}}

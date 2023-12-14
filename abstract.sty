@@ -49,3 +49,26 @@
 \newcommand{\Fref}[1]{Fig.~\ref{#1}}
 \newcommand{\tref}[1]{表~\ref{#1}}
 \newcommand{\Tref}[1]{Table~\ref{#1}}
+
+%%% Captionの区切り文字を変更
+%%% Original Source from jreport.cls (ASCII pLaTeX2e)
+%%%
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \iftdir\sbox\@tempboxa{#1\hskip1zw#2}%
+    %\else\sbox\@tempboxa{#1: #2}%
+    %CHANGE START
+    \else\sbox\@tempboxa{#1\  #2}%
+    %CHANGE END
+  \fi
+  \ifdim \wd\@tempboxa >\hsize
+    \iftdir #1\hskip1zw#2\relax\par
+      %\else #1: #2\relax\par\fi
+      %CHANGE START
+      \else #1\  #2\relax\par\fi
+      %CHANGE END
+  \else
+    \global \@minipagefalse
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}

@@ -7,17 +7,20 @@
 %%%                                  v2.0.0 Yuki MATSUKAWA 25 Dec. 2023
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,fleqn,11pt]{jreport}
+\documentclass[a4paper,fleqn,dvipdfmx,11pt]{jreport}
 
-\usepackage{abst}			%abstract style
+%%% abstract style %%%
+\usepackage{master_settings}
 \usepackage{epsf,color}
 \usepackage{float}
-\usepackage{subfigure}	
+\usepackage{subfigure}
 \usepackage{rotating}
-\usepackage{lscape}	
+\usepackage{lscape}
 \usepackage{bm}
-\usepackage{multirow}		
+\usepackage{multirow}
 \usepackage{multicol}
+
+% ページ番号を付けない
 \pagestyle{empty}
 
 \begin{document}
@@ -29,21 +32,21 @@
 
 \begin{center}
 \fontsize{12pt}{20pt}\selectfont
+% 修士論文題目
 ここには修士論文のタイトルを入れます．\\ 一文字でも間違えたら受理されません．
+% 修士論文題目
 \end{center}
 
-\ 
-
+\vskip\baselineskip
 \noindent
-% 姓と名の間に全角スペース忘れずに %
+% 姓と名の間に「全角」スペース忘れずに %
 \begin{flushright}
-機械工学専攻 \qquad 姓姓　名名 \\
-指導教員 \qquad 塚原　隆裕
+機械航空宇宙工学専攻 \qquad 姓姓姓　名名 \\
+指導教員 \qquad 姓姓　名名
 \end{flushright}
 
-\ 
-
-% ここから書き始める %
+\vskip\baselineskip
+%%% ここから書き始める %%%
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
@@ -60,7 +63,8 @@
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト．
 
-\fref{fig:abst1}は虎，\fref{fig:abst2}も虎．
+図~\ref{fig:abst1}は虎，図~\ref{fig:abst2}も虎．
+アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
@@ -73,23 +77,20 @@
 
 \begin{multicols}{2}
    	\begin{figure}[H]
-   		\begin{center}
-   		\includegraphics[width=0.6\columnwidth]{tiger.eps}
-		\vspace{1.2cm}
+        \centering
+   		\includegraphics[width=0.6\columnwidth]{tiger_1.pdf}
    		\caption{Tiger 1.}
    		\label{fig:abst1}
-   		\end{center}
    	\end{figure}
 
    	\begin{figure}[H]
-   		\begin{center}
-   		\includegraphics[width=0.6\columnwidth]{tiger.eps}
-		\vspace{1.2cm}
+        \centering
+   		\includegraphics[width=0.6\columnwidth]{tiger_2.pdf}
    		\caption{Tiger 2.}
    		\label{fig:abst2}
-   		\end{center}
    	\end{figure}
 \end{multicols}
 
+%%% ここまで %%%
 
 \end{document}

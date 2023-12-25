@@ -7,7 +7,10 @@
 %%%                                  v2.0.0 Yuki MATSUKAWA 14 Dec. 2023
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,fleqn,dvipdfmx,12pt]{jreport}
+% pLaTeX でコンパイルする場合はこれを使う
+\documentclass[a4paper,fleqn,dvipdfmx,12pt]{jsarticle}
+% upLaTeX でコンパイルする場合はこれを使う
+% \documentclass[a4paper,fleqn,dvipdfmx,uplatex,12pt]{jsarticle}
 
 %%% abstract style %%%
 \usepackage{bachelor_settings}
@@ -19,6 +22,11 @@
 \usepackage{bm}
 \usepackage{multirow}
 
+% 添削時には行番号を付けるとわかりやすい
+% 提出時にはコメントアウトする
+% \usepackage[mathlines,pagewise]{lineno}
+% \linenumbers\relax
+
 % ページ番号を付けない
 \pagestyle{empty}
 
@@ -29,12 +37,11 @@
 %%%%%%%%%%%%%%%%%
 
 \begin{center}
-\fontsize{16pt}{16pt}\selectfont
-{\gtfamily\bfseries 
+\fontsize{16pt}{18pt}\selectfont
+\gtfamily\bfseries 
 % 卒業論文の日本語題目
 ここには卒業論文のタイトルを入れます．\\ 一文字でも間違えたら受理されません．
 % 卒業論文の日本語題目
-}
 \end{center}
 
 \noindent
@@ -43,8 +50,8 @@
 % \hfill は消さない
 ［xx研究室］ \hfill 75*****　姓姓　名名
 
+\setlength{\baselineskip}{15pt}
 \vskip\baselineskip
-\fontsize{12pt}{15pt}\selectfont
 %%% ここから書き始める %%%
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
@@ -64,21 +71,19 @@
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
-アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
-アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト．
 
-% 画像は 1, 2 枚程度にしておきましょう．
+% 画像は 1, 2 枚程度にしておきましょう
 \begin{figure}[H]
 	\centering
-	\begin{minipage}{0.35\columnwidth}
+	\begin{minipage}{0.3\columnwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{tiger1.pdf}
 		\caption{Tiger 1.}
 		\label{fig:abst1}
 	\end{minipage}
-	\hspace{15mm}
-	\begin{minipage}{0.35\columnwidth}
+	\hspace{15mm}	% 図の間隔は適宜調整
+	\begin{minipage}{0.3\columnwidth}
 		\centering
 		\includegraphics[width=\columnwidth]{tiger2.pdf}
 		\caption{Tiger 2.}
@@ -96,11 +101,10 @@
 %%%%%%%%%%%%%%%%%
 
 \begin{center}
-{\sffamily\bfseries 
+\sffamily\bfseries 
 % 卒業論文の英語題目
 Enter the title of your graduation thesis here. \\ If you make a mistake in even one letter, it will not be accepted.
 % 卒業論文の英語題目
-}
 \end{center}
 
 \noindent
@@ -111,7 +115,6 @@ Enter the title of your graduation thesis here. \\ If you make a mistake in even
 [xx Group] \hfill 75***** First FAMILY
 
 \vskip\baselineskip
-\fontsize{12pt}{15pt}\selectfont
 %%% ここから書き始める %%%
 Abstract abstract abstract abstract abstract abstract abstract abstract abstract 
 abstract abstract abstract abstract abstract abstract abstract abstract abstract

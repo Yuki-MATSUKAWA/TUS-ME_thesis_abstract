@@ -18,7 +18,6 @@
 \usepackage{lscape}
 \usepackage{bm}
 \usepackage{multirow}
-\usepackage{multicol}
 
 % ページ番号を付けない
 \pagestyle{empty}
@@ -82,21 +81,22 @@
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト
 アブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクトアブストラクト．
 
-\begin{multicols}{2}
-   	\begin{figure}[H]
-        \centering
-   		\includegraphics[width=0.6\columnwidth]{tiger_1.pdf}
-   		\caption{Tiger 1.}
-   		\label{fig:abst1}
-   	\end{figure}
-
-   	\begin{figure}[H]
-        \centering
-   		\includegraphics[width=0.6\columnwidth]{tiger_2.pdf}
-   		\caption{Tiger 2.}
-   		\label{fig:abst2}
-   	\end{figure}
-\end{multicols}
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.35\columnwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{tiger1.pdf}
+		\caption{Tiger 1.}
+		\label{fig:abst1}
+	\end{minipage}
+	\hspace{15mm}
+	\begin{minipage}{0.35\columnwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{tiger2.pdf}
+		\caption{Tiger 2.}
+		\label{fig:abst2}
+	\end{minipage}
+\end{figure}
 
 %%% ここまで %%%
 

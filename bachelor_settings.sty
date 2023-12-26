@@ -8,33 +8,37 @@
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% テキストエリア指定
-%%% A4 paper:297mm x 210mm
+%%% テキストエリア指定 %%%
+%%% A4 paper:297 mm x 210 mm %%%
 \setlength{\hoffset}{-0.4truemm}
 \setlength{\voffset}{-5.4truemm}
 \setlength{\oddsidemargin}{0truemm}
 \setlength{\evensidemargin}{0truemm}
 \setlength{\topmargin}{0truemm}
-%\setlength{\footskip}{15truemm}
+\setlength{\footskip}{0truemm}
 \setlength{\textheight}{262truemm}
 \setlength{\textwidth}{175truemm}
 \setlength{\headsep}{0truemm}
 \setlength{\headheight}{0truemm}
 
-%%==== Packages ================================%%
-
-%%% 図の挿入
+%%% Packages %%%
+% 図の挿入
 \usepackage{graphicx}
-%%% 数式等
+% 数式等
 \usepackage{physics}
 \usepackage{amsmath,amssymb}
-%%% otf
+% otf
 \usepackage[deluxe]{otf}
-%%% フォントを Times に変更
+% フォントを Times に変更
 \usepackage{newtxtext,newtxmath}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{lscape}
+\usepackage{bm}
+\usepackage{multirow}
 
-%%==== 表示の変更 ==============================%%
-
+%%% 表示の変更 %%%
 \newcommand{\etal}{et al.\ }
 \def\Gr{\mathit{Gr}}
 \def\Ma{\mathit{Ma}}
@@ -49,7 +53,7 @@
 \def\Wi{\mathit{Wi}}
 
 \renewcommand{\figurename}{Fig.~}
-\renewcommand{\tablename}{Table~}       %表番号
+\renewcommand{\tablename}{Table~}
 \newcommand{\eref}[1]{式~(\ref{#1})}
 \newcommand{\Eref}[1]{Equation~(\ref{#1})}
 \newcommand{\sref}[1]{\ref{#1}~節}

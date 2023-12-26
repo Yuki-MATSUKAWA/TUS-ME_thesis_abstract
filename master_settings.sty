@@ -8,8 +8,8 @@
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% テキストエリア指定
-%%% A4 paper:297mm x 210mm
+%%% テキストエリア指定 %%%
+%%% A4 paper:297 mm x 210 mm %%%
 \setlength{\hoffset}{-7.4truemm}
 \setlength{\voffset}{4.6truemm}
 \setlength{\oddsidemargin}{0truemm}
@@ -21,20 +21,23 @@
 \setlength{\headsep}{0truemm}
 \setlength{\headheight}{0truemm}
 
-%%==== Packages ================================%%
-
-%%% 図の挿入
+%%% Packages %%%
+% 図の挿入
 \usepackage{graphicx}
-%%% 数式等
+% 数式等
 \usepackage{physics}
 \usepackage{amsmath,amssymb}
-%%% otf
+\usepackage{bm}
+% otf
 \usepackage[deluxe]{otf}
-%%% フォントを Times に変更
+% フォントを Times に変更
 \usepackage{newtxtext,newtxmath}
+% 図の出力位置を H で指定
+\usepackage{float}
+% 関連する図を並べる際に使用
+\usepackage{subfigure}
 
-%%==== 表示の変更 ==============================%%
-
+%%% 表示の変更 %%%
 \newcommand{\etal}{et al.\ }
 \def\Gr{\mathit{Gr}}
 \def\Ma{\mathit{Ma}}
@@ -48,8 +51,8 @@
 \def\Ta{\mathit{Ta}}
 \def\Wi{\mathit{Wi}}
 
-\renewcommand{\figurename}{Fig.}
-\renewcommand{\tablename}{Table}       %表番号
+\renewcommand{\figurename}{Fig.~}
+\renewcommand{\tablename}{Table~}
 \newcommand{\eref}[1]{式~(\ref{#1})}
 \newcommand{\Eref}[1]{Equation~(\ref{#1})}
 \newcommand{\sref}[1]{\ref{#1}~節}
@@ -58,30 +61,7 @@
 \newcommand{\tref}[1]{表~\ref{#1}}
 \newcommand{\Tref}[1]{Table~\ref{#1}}
 
-%%% Captionの区切り文字を変更
-%%% Original Source from jreport.cls (ASCII pLaTeX2e)
-%%%
-\long\def\@makecaption#1#2{%
-  \vskip\abovecaptionskip
-  \iftdir\sbox\@tempboxa{#1\hskip1zw#2}%
-    %\else\sbox\@tempboxa{#1: #2}%
-    %CHANGE START
-    \else\sbox\@tempboxa{#1\  #2}%
-    %CHANGE END
-  \fi
-  \ifdim \wd\@tempboxa >\hsize
-    \iftdir #1\hskip1zw#2\relax\par
-      %\else #1: #2\relax\par\fi
-      %CHANGE START
-      \else #1\  #2\relax\par\fi
-      %CHANGE END
-  \else
-    \global \@minipagefalse
-    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
-  \fi
-  \vskip\belowcaptionskip}
-
-%%% 修論要旨用設定
+%%% 修論要旨用設定 %%%
 \makeatletter
 \def\mojiparline#1{
     \newcounter{mpl}

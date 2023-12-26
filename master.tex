@@ -7,17 +7,20 @@
 %%%                                  v2.0.0 Yuki MATSUKAWA 25 Dec. 2023
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,fleqn,dvipdfmx,11pt]{jreport}
+% pLaTeX でコンパイルする場合はこれを使う
+\documentclass[a4paper,fleqn,dvipdfmx,12pt]{jsarticle}
+% upLaTeX でコンパイルする場合はこれを使う
+% \documentclass[a4paper,fleqn,dvipdfmx,uplatex,12pt]{jsarticle}
 
 %%% abstract style %%%
+% 卒論要旨設定ファイル
 \usepackage{master_settings}
-\usepackage{epsf,color}
-\usepackage{float}
-\usepackage{subfigure}
-\usepackage{rotating}
-\usepackage{lscape}
-\usepackage{bm}
-\usepackage{multirow}
+
+% 行番号の表示
+% 添削時には行番号を付けるとわかりやすい
+% 提出時にはコメントアウトする
+% \usepackage[mathlines,pagewise]{lineno}
+% \linenumbers\relax
 
 % ページ番号を付けない
 \pagestyle{empty}

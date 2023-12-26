@@ -22,7 +22,7 @@ latexdiff-vc を Windows で使用する際に実行できない不具合を確�
 * `bachelor.tex`：論文要旨本文の `tex` ファイル
 * `bachelor_settings.sty`：論文要旨の設定ファイル
 * `.latexmkrc`：latexmk を使用する場合に使ってください．
-* ここでは図の例として `tiger_1.pdf` と `tiger_2.pdf` を使用していますが，自身の論文要旨に合わせて変更してください．
+* ここでは図の例として `tiger1.pdf` と `tiger2.pdf` を使用していますが，自身の論文要旨に合わせて変更してください．
 
 ### 論文概要（アブストラクト）
 
@@ -64,7 +64,7 @@ latexdiff-vc を Windows で使用する際に実行できない不具合を確�
 * `master.tex`：論文要旨本文の `tex` ファイル
 * `master_settings.sty`：論文要旨の設定ファイル
 * `.latexmkrc`：latexmk を使用する場合に使ってください．
-* ここでは図の例として `tiger_1.pdf` と `tiger_2.pdf` を使用していますが，自身の論文要旨に合わせて変更してください．
+* ここでは図の例として `tiger1.pdf` と `tiger2.pdf` を使用していますが，自身の論文要旨に合わせて変更してください．
 
 1. データ形式等
     * データ形式：`pdf` ファイル
